@@ -1,15 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        <p>This is my new website which is hosted on GitHub Pages!</p>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to my GitHub.io page">
+  <title>Developer Portfolio | GitHub.io</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    /* Container */
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      max-width: 800px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .profile {
+      margin-bottom: 20px;
+    }
+
+    /* Animated Element */
+    .circle {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(116, 235, 213, 0.6);
+      animation: moveCircle 6s infinite ease-in-out;
+    }
+
+    /* Button */
+    a.button {
+      text-decoration: none;
+      background-color: #74ebd5;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #ACB6E5;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Animation Keyframes */
+    @keyframes moveCircle {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(-300px, 300px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .circle {
+        display: none; /* Remove animation on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circle"></div>
+    <h1>Welcome to My Developer Portfolio</h1>
+    <p class="profile">Hi! I’m a passionate web developer skilled in front-end technologies like HTML, CSS, JavaScript, and React. I specialize in building responsive, dynamic web applications that provide great user experiences.</p>
+    <h2>Technologies I Work With:</h2>
+    <p>JavaScript, ReactJS, Next.js, Node.js, TailwindCSS, and more.</p>
+    <h2>Recent Projects:</h2>
+    <p>1. <strong>Project A</strong> – A responsive e-commerce site.</p>
+    <p>2. <strong>Project B</strong> – A real-time chat application.</p>
+    <a href="#" class="button">Contact Me</a>
+  </div>
+
+  <script>
+    // Button alert
+    document.querySelector('.button').addEventListener('click', function() {
+      alert('This is a dummy contact button! Customize it with your email or contact form.');
+    });
+
+    // Simple JavaScript Animation
+    let circle = document.querySelector('.circle');
+
+    function animateCircle() {
+      circle.style.animation = 'moveCircle 6s infinite ease-in-out';
+    }
+
+    window.addEventListener('load', animateCircle);
+  </script>
+</body>
 </html>
